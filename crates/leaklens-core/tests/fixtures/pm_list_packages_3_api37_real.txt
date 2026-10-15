@@ -1,0 +1,4 @@
+package:dev.mobile.maestro
+package:com.andrewpack.fata
+package:dev.mobile.maestro.test
+package:com.tokaiopt.app.tokaiapp

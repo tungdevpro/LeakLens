@@ -1,0 +1,460 @@
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+Display #0 (activities from top to bottom):
+  * Task{583faa6 #31 type=standard I=com.andrewpack.fata/.MainActivity U=0 visible=true visibleRequested=true mode=fullscreen translucent=false sz=1}
+    fullscreenRequestAllowMode=NONE
+    isSleeping=false
+    topResumedActivity=ActivityRecord{110488577 u0 com.andrewpack.fata/.MainActivity t31}
+    * Hist  #0: ActivityRecord{110488577 u0 com.andrewpack.fata/.MainActivity t31}
+      packageName=com.andrewpack.fata processName=com.andrewpack.fata
+      launchedFromUid=2000 launchedFromPackage=com.android.shell launchedFromFeature=null userId=0
+      app=ProcessRecord{e165956 3804:com.andrewpack.fata/u0a229}
+      Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.andrewpack.fata/.MainActivity }
+      rootOfTask=true task=Task{583faa6 #31 type=standard I=com.andrewpack.fata/.MainActivity}
+      taskAffinity=null
+      mActivityComponent=com.andrewpack.fata/.MainActivity
+      baseDir=/data/app/~~qPWmYdScZDTkZCgPqEaFSg==/com.andrewpack.fata-PLsqb2hubO5GyluVeGy8Iw==/base.apk
+      dataDir=/data/user/0/com.andrewpack.fata
+      stateNotNeeded=false componentSpecified=true mActivityType=standard
+      compat={420dpi} theme=0x7f0c0000
+      mLastReportedConfigurations:
+        mGlobalConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w923dp h411dp 420dpi nrml long compactNeeded land finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 2424, 1080) mAppBounds=Rect(0, 0 - 2424, 1080) mMaxBounds=Rect(0, 0 - 2424, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} as.3 s.72 fontWeightAdjustment=0}
+        mOverrideConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w923dp h411dp 420dpi nrml long compactNeeded land finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 2424, 1080) mAppBounds=Rect(0, 0 - 2424, 1080) mMaxBounds=Rect(0, 0 - 2424, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_90} as.3 s.5 fontWeightAdjustment=0}
+      mLastReportedActivityWindowInfo=ActivityWindowInfo{isEmbedded=false, taskBounds=Rect(0, 0 - 2424, 1080), taskFragmentBounds=Rect(0, 0 - 2424, 1080)}
+      CurrentConfiguration={1.0 310mcc260mnc [en_US] ldltr sw411dp w923dp h411dp 420dpi nrml long compactNeeded land finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 2424, 1080) mAppBounds=Rect(0, 0 - 2424, 1080) mMaxBounds=Rect(0, 0 - 2424, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_90} as.3 s.5 fontWeightAdjustment=0}
+      RequestedOverrideConfiguration={0.0 ?mcc0mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?round ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mMaxBounds=Rect(0, 0 - 0, 0) mDisplayRotation=undefined mWindowingMode=undefined mActivityType=standard mAlwaysOnTop=undefined mRotation=undefined} ?fontWeightAdjustment}
+      ResolvedOverrideConfiguration={0.0 ?mcc0mnc ?localeList ?layoutDir sw411dp w923dp h411dp ?density nrml long ?round compactNeeded ?ldr ?wideColorGamut land ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 2424, 1080) mAppBounds=Rect(0, 0 - 2424, 1080) mMaxBounds=Rect(0, 0 - 2424, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=undefined mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_90} s.5 ?fontWeightAdjustment}
+      bounds=Rect(0, 0 - 2424, 1080)
+      taskDescription: label="fata" icon=null iconResource=com.andrewpack.fata/0 iconFilename=null primaryColor=ff2196f3
+        backgroundColor=ffffffff statusBarColor=ff000000 navigationBarColor=808080
+       backgroundColorFloating=ffffffff
+      launchFailed=false launchCount=1 lastLaunchTime=-2s935ms
+      mHaveState=false mIcicle=null
+      state=RESUMED finishing=false
+      keysPaused=false inHistory=true idle=true
+      occludesParent=true mNoDisplay=false immersive=false launchMode=1
+      mActivityType=standard
+      windows=[Window{5e1cc94 u0 com.andrewpack.fata/com.andrewpack.fata.MainActivity}, Window{16f1aeb u0 Splash Screen com.andrewpack.fata}]
+      windowType=2
+      fixedRotationConfig={0.0 ?mcc0mnc ?localeList ?layoutDir sw411dp w923dp h411dp ?density nrml long ?round compactNeeded ?ldr ?wideColorGamut land ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 2424, 1080) mAppBounds=Rect(0, 0 - 2424, 1080) mMaxBounds=Rect(0, 0 - 2424, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=undefined mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} ?fontWeightAdjustment}
+      mOccludesParent=true
+      overrideOrientation=SCREEN_ORIENTATION_USER_LANDSCAPE
+      requestedOrientation=SCREEN_ORIENTATION_USER_LANDSCAPE
+      mVisibleRequested=true mVisible=true mClientVisible=true reportedDrawn=true reportedVisible=false
+      mNumInterestingWindows=1 mNumDrawnWindows=1 allDrawn=true)
+      startingData=null firstWindowDrawn=true
+      resizeMode=RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION
+      mLastReportedMultiWindowMode=false mLastReportedPictureInPictureMode=false
+      supportsSizeChanges=SIZE_CHANGES_UNSUPPORTED_METADATA
+      configChanges=0x40007fff
+      neverSandboxDisplayApis=false
+      alwaysSandboxDisplayApis=false
+      isTransparentPolicyRunning=false
+      areBoundsLetterboxed=false
+      isLetterboxRunning=false
+
+  * Task{5eecba7 #1 type=home U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=1}
+    fullscreenRequestAllowMode=NONE
+    * Task{64f4c66 #2 type=home I=com.google.android.apps.nexuslauncher/.NexusLauncherActivity U=0 rootTaskId=1 visible=false visibleRequested=false mode=fullscreen translucent=true sz=2}
+      fullscreenRequestAllowMode=NONE
+      mLastPausedActivity: ActivityRecord{10474927 u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity t2}
+      isSleeping=false
+      * Hist  #1: ActivityRecord{10474927 u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity t2}
+        packageName=com.google.android.apps.nexuslauncher processName=com.google.android.apps.nexuslauncher
+        launchedFromUid=0 launchedFromPackage=null launchedFromFeature=null userId=0
+        app=ProcessRecord{c399b16 1020:com.google.android.apps.nexuslauncher/u0a193}
+        Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.google.android.apps.nexuslauncher/.NexusLauncherActivity (has extras) }
+        rootOfTask=true task=Task{64f4c66 #2 type=home I=com.google.android.apps.nexuslauncher/.NexusLauncherActivity}
+        taskAffinity=null
+        mActivityComponent=com.google.android.apps.nexuslauncher/.NexusLauncherActivity
+        baseDir=/system_ext/priv-app/NexusLauncherRelease/NexusLauncherRelease.apk
+        dataDir=/data/user/0/com.google.android.apps.nexuslauncher
+        stateNotNeeded=true componentSpecified=true mActivityType=home
+        compat={420dpi} theme=0x7f140023
+        mLastReportedConfigurations:
+          mGlobalConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h923dp 420dpi nrml long compactNeeded port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2424) mAppBounds=Rect(0, 0 - 1080, 2424) mMaxBounds=Rect(0, 0 - 1080, 2424) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.65 fontWeightAdjustment=0}
+          mOverrideConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h923dp 420dpi nrml long compactNeeded port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2424) mAppBounds=Rect(0, 0 - 1080, 2424) mMaxBounds=Rect(0, 0 - 1080, 2424) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=home mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.7 fontWeightAdjustment=0}
+        mLastReportedActivityWindowInfo=ActivityWindowInfo{isEmbedded=false, taskBounds=Rect(0, 0 - 1080, 2424), taskFragmentBounds=Rect(0, 0 - 1080, 2424)}
+        CurrentConfiguration={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h923dp 420dpi nrml long compactNeeded port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2424) mAppBounds=Rect(0, 0 - 1080, 2424) mMaxBounds=Rect(0, 0 - 1080, 2424) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=home mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.8 fontWeightAdjustment=0}
+        RequestedOverrideConfiguration={0.0 ?mcc0mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?round ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mMaxBounds=Rect(0, 0 - 0, 0) mDisplayRotation=undefined mWindowingMode=undefined mActivityType=home mAlwaysOnTop=undefined mRotation=undefined} as.3 ?fontWeightAdjustment}
+        taskDescription: label="null" icon=null iconResource=/0 iconFilename=null primaryColor=fff1f0f6
+          backgroundColor=ffededf6 statusBarColor=0 navigationBarColor=0
+         backgroundColorFloating=fff1f0f6
+        launchFailed=false launchCount=0 lastLaunchTime=-13s580ms
+        mHaveState=true mIcicle=Bundle[mParcelledData.dataSize=9324]
+        state=STOPPED finishing=false
+        keysPaused=false inHistory=true idle=true
+        occludesParent=true mNoDisplay=false immersive=false launchMode=2
+        mActivityType=home
+        windows=[Window{c2bf136 u0 com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity}]
+        windowType=2
+        mOccludesParent=true
+        overrideOrientation=SCREEN_ORIENTATION_NOSENSOR
+        requestedOrientation=SCREEN_ORIENTATION_NOSENSOR
+        mVisibleRequested=false mVisible=false mClientVisible=false reportedDrawn=false reportedVisible=false
+        mAppStopped=true
+        mNumInterestingWindows=1 mNumDrawnWindows=1 allDrawn=false)
+        nowVisible=false lastVisibleTime=-8s43ms
+        resizeMode=RESIZE_MODE_RESIZEABLE
+        mLastReportedMultiWindowMode=false mLastReportedPictureInPictureMode=false
+        supportsSizeChanges=SIZE_CHANGES_UNSUPPORTED_METADATA
+        configChanges=0x4ffb
+        neverSandboxDisplayApis=false
+        alwaysSandboxDisplayApis=false
+        isTransparentPolicyRunning=false
+        areBoundsLetterboxed=false
+        isLetterboxRunning=false
+        mRecreateConfigMask=0
+      * TaskFragment{75de874 mode=multi-window organizerUid=10193 organizerProc=com.google.android.apps.nexuslauncher}
+        mForceHiddenFlags=4
+        fullscreenRequestAllowMode=NONE
+
+  * Task{e95323 #4 name=SplitRoot type=undefined U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=2}
+    fullscreenRequestAllowMode=ENTER
+    mCreatedByOrganizer=true
+    * Task{1b83dd9 #6 name=side type=undefined U=0 rootTaskId=4 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+      mBounds=Rect(0, 2424 - 1080, 3636)
+      fullscreenRequestAllowMode=ENTER
+      mCreatedByOrganizer=true
+      mDisallowOverrideBoundsForChildren=true
+      isSleeping=false
+    * Task{abf4020 #5 name=main type=undefined U=0 rootTaskId=4 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+      fullscreenRequestAllowMode=ENTER
+      mCreatedByOrganizer=true
+      mDisallowOverrideBoundsForChildren=true
+      isSleeping=false
+
+  * Task{6219452 #3 name=Bubbles type=undefined U=0 visible=false visibleRequested=false mode=multi-window translucent=true sz=1}
+    fullscreenRequestAllowMode=NONE
+    mCreatedByOrganizer=true
+    mDisablePip=true
+    * Task{c0a5f3f #0 name=Bubbles-visibility-barrier type=undefined U=0 rootTaskId=3 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+      fullscreenRequestAllowMode=NONE
+      mCreatedByOrganizer=true
+      isSleeping=false
+
+  Resumed activities in task display areas (from top to bottom):
+    Resumed: ActivityRecord{110488577 u0 com.andrewpack.fata/.MainActivity t31}
+
+  ResumedActivity: ActivityRecord{110488577 u0 com.andrewpack.fata/.MainActivity t31}
+
+ActivityTaskSupervisor state:
+  topDisplayFocusedRootTask=Task{583faa6 #31 type=standard I=com.andrewpack.fata/.MainActivity}
+  Display: mDisplayId=0 (organized)
+    init=1080x2424 420dpi mMinSizeOfResizeableTaskDp=220 cur=1080x2424 app=1080x2424 rng=1080x1080-2424x2424
+    deferred=false mLayoutNeeded=false
+  mLastOrientationSource=WindowedMagnification:0:31@155788205
+  deepestLastOrientationSource=ActivityRecord{110488577 u0 com.andrewpack.fata/.MainActivity t31}
+  overrideConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h923dp 420dpi nrml long compactNeeded port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2424) mAppBounds=Rect(0, 0 - 1080, 2424) mMaxBounds=Rect(0, 0 - 1080, 2424) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.41 fontWeightAdjustment=0}
+  mHasSetIgnoreOrientationRequest=false ignoreOrientationRequest=false
+  mSleeping=false mAllSleepTokens=[]
+  mLayoutSeq=106
+  mImeWindow=Window{9420c0e u0 InputMethod}
+  mImeLayeringTarget=Window{16f1aeb u0 Splash Screen com.andrewpack.fata}
+  mImeInputTarget=Window{5e1cc94 u0 com.andrewpack.fata/com.andrewpack.fata.MainActivity}
+  mImeControlTarget=Window{5e1cc94 u0 com.andrewpack.fata/com.andrewpack.fata.MainActivity}
+  ImeContainer
+    mNeedsLayer=false
+    mImeWindowToken=ImeWindowToken{a199e10 u0 android.os.Binder@3a7e4c2}
+  mImeParent=ActivityRecord{110488577 u0 com.andrewpack.fata/.MainActivity t31}
+  mRemoteInsetsControlTarget=RemoteInsetsControlTarget{fc62941 displayId=0 requestedVisibleTypes=503 animatingTypes=0}
+  mCurrentFocus=Window{5e1cc94 u0 com.andrewpack.fata/com.andrewpack.fata.MainActivity}
+  mFocusedApp=ActivityRecord{110488577 u0 com.andrewpack.fata/.MainActivity t31}
+  mFixedRotationLaunchingApp=ActivityRecord{110488577 u0 com.andrewpack.fata/.MainActivity t31}
+  AsyncRotationController
+    mTransitionOp=1
+    mIsStartTransactionCommitted=false
+    mIsSyncDrawRequested=false
+    mOriginalRotation=0
+    mTargetWindowTokens={WindowToken{4399364 type=2000 android.os.BinderProxy@1f8bcf6}=Operation{a=2 pending=false}, WindowToken{775a79e type=2019 android.os.BinderProxy@5767d6}=Operation{a=2 pending=false}, WindowToken{aede634 type=2024 android.os.BinderProxy@2393507}=Operation{a=1 pending=false}, WindowToken{fcc0cc2 type=2024 android.os.BinderProxy@be0c50d}=Operation{a=1 pending=false}}
+
+  mHoldScreenWindow=null
+  mObscuringWindow=null
+  mLastWakeLockHoldingWindow=null
+  mLastWakeLockObscuringWindow=null
+
+  mIsHardwareRendererOutputDisabled=false
+  mAreClientRenderingLimitationsEnabled=false
+
+  displayId=0
+  mWallpaperTarget=null
+  mLastWallpaperZoomOut=0.0
+  token WallpaperWindowToken{627367d showWhenLocked=true}:
+    mWallpaperX=0.0
+    mWallpaperY=0.5
+    mWallpaperXStep=0.33333334
+    mWallpaperYStep=1.0
+    mWallpaperDisplayOffsetX=NA
+    mWallpaperDisplayOffsetY=NA
+
+  mSystemGestureExclusion=SkRegion()
+
+  Display areas in top down Z order:
+    * Leaf:36:36
+    * OneHanded:34:35
+      * Leaf:34:35
+    * Leaf:33:33
+    * OneHanded:32:32
+      * Leaf:32:32
+    * WindowedMagnification:0:31 (organized)
+      * OneHanded:26:31
+        * Leaf:26:31
+      * Leaf:24:25
+      * OneHanded:0:23
+        * Leaf:23:23
+        * AppZoomOut:20:22 (organized)
+          * Leaf:20:22
+        * Leaf:17:19
+        * AppZoomOut:16:16 (organized)
+          * Leaf:16:16
+        * Leaf:15:15
+        * AppZoomOut:2:14 (organized)
+          * ImePlaceholder:13:14
+            * ImeContainer
+          * Leaf:3:12
+          * DefaultTaskDisplayArea (organized)
+        * Leaf:1:1
+        * AppZoomOut:0:0 (organized)
+          * Leaf:0:0
+
+  Task display areas in top down Z order:
+    TaskDisplayArea DefaultTaskDisplayArea
+      overrideConfig={0.0 ?mcc0mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?round ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mMaxBounds=Rect(0, 0 - 0, 0) mDisplayRotation=undefined mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=undefined} ?fontWeightAdjustment}
+      mPreferredTopFocusableRootTask=Task{583faa6 #31 type=standard I=com.andrewpack.fata/.MainActivity}
+      mLastFocusedRootTask=Task{583faa6 #31 type=standard I=com.andrewpack.fata/.MainActivity}
+      Application tokens in top down Z order:
+      * Task{583faa6 #31 type=standard I=com.andrewpack.fata/.MainActivity U=0 visible=true visibleRequested=true mode=fullscreen translucent=false sz=1}
+        bounds=[0,0][1080,2424]
+        * ActivityRecord{110488577 u0 com.andrewpack.fata/.MainActivity t31}
+      * Task{5eecba7 #1 type=home U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=1}
+        bounds=[0,0][1080,2424]
+        * Task{64f4c66 #2 type=home I=com.google.android.apps.nexuslauncher/.NexusLauncherActivity U=0 rootTaskId=1 visible=false visibleRequested=false mode=fullscreen translucent=true sz=2}
+          bounds=[0,0][1080,2424]
+          * ActivityRecord{10474927 u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity t2}
+          * TaskFragment{75de874 mode=multi-window organizerUid=10193 organizerProc=com.google.android.apps.nexuslauncher}
+            bounds=[0,0][1080,2424]
+      * Task{e95323 #4 name=SplitRoot type=undefined U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=2}
+        bounds=[0,0][1080,2424]
+        * Task{1b83dd9 #6 name=side type=undefined U=0 rootTaskId=4 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+          bounds=[0,2424][1080,3636]
+        * Task{abf4020 #5 name=main type=undefined U=0 rootTaskId=4 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+          bounds=[0,0][1080,2424]
+      * Task{6219452 #3 name=Bubbles type=undefined U=0 visible=false visibleRequested=false mode=multi-window translucent=true sz=1}
+        bounds=[0,0][1080,2424]
+        * Task{c0a5f3f #0 name=Bubbles-visibility-barrier type=undefined U=0 rootTaskId=3 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+          bounds=[0,0][1080,2424]
+
+  rootHomeTask=Task=1
+
+  PinnedTaskController
+    mIsImeShowing=false
+    mImeHeight=0
+    mMinAspectRatio=0.41841003
+    mMaxAspectRatio=2.39
+
+  DisplayFrames w=1080 h=2424 r=0
+
+  DisplayPolicy
+    mCarDockEnablesAccelerometer=true mDeskDockEnablesAccelerometer=true
+    mDockMode=EXTRA_DOCK_STATE_UNDOCKED mLidState=LID_OPEN
+    mAwake=true mScreenOnEarly=true mScreenOnFully=true
+    mKeyguardDrawComplete=true mWindowManagerDrawComplete=true
+    mHdmiPlugged=false
+    mLastAppearance=LIGHT_STATUS_BARS LIGHT_NAVIGATION_BARS FORCE_LIGHT_NAVIGATION_BARS
+    mLastBehavior=SHOW_TRANSIENT_BARS_BY_SWIPE
+    mShowingDream=false mDreamingLockscreen=false
+    mStatusBar=Window{ac469cd u0 StatusBar}
+    mExpandedPanel=Window{76fd0f9 u0 NotificationShade}
+    isKeyguardShowing=false
+    mNavigationBar=Window{823a420 u0 Taskbar}
+    mNavBarOpacityMode=2
+    mNavigationBarCanMove=false
+    mHasBottomNavigationBar=true
+    mLeftGestureHost=Window{823a420 u0 Taskbar}
+    mTopGestureHost=Window{ac469cd u0 StatusBar}
+    mRightGestureHost=Window{823a420 u0 Taskbar}
+    mBottomGestureHost=Window{823a420 u0 Taskbar}
+    mFocusedWindow=Window{5e1cc94 u0 com.andrewpack.fata/com.andrewpack.fata.MainActivity}
+    mTopFullscreenOpaqueWindowState=Window{16f1aeb u0 Splash Screen com.andrewpack.fata}
+    mSystemUiControllingWindow=Window{5e1cc94 u0 com.andrewpack.fata/com.andrewpack.fata.MainActivity}
+    mSystemBarColorApps={ActivityRecord{110488577 u0 com.andrewpack.fata/.MainActivity t31}}
+    mNavBarColorWindowCandidate=Window{16f1aeb u0 Splash Screen com.andrewpack.fata}
+    mNavBarBackgroundWindowCandidate=Window{16f1aeb u0 Splash Screen com.andrewpack.fata}
+    mLastStatusBarAppearanceRegions=
+      AppearanceRegion{LIGHT_STATUS_BARS bounds=[0,0][2424,1080]}
+    mLastLetterboxDetails=
+    mStatusBarBackgroundWindows=
+      Window{16f1aeb u0 Splash Screen com.andrewpack.fata}
+    mImeInsetsConsumed=false
+    mForceShowNavigationBarEnabled=false mAllowLockscreenWhenOn=false
+    mAllowsSystemBarRemoteInsetsController=false
+    mDecorInsetsInfo:
+      ROTATION_0={overrideNonDecorInsets=[0,142][0,63], overrideConfigInsets=[0,142][0,63], overrideNonDecorFrame=[0,142][1080,2361], overrideConfigFrame=[0,142][1080,2361]}
+      ROTATION_90={overrideNonDecorInsets=[142,0][0,63], overrideConfigInsets=[142,0][0,63], overrideNonDecorFrame=[142,0][2424,1017], overrideConfigFrame=[142,0][2424,1017]}
+      ROTATION_180={overrideNonDecorInsets=[0,0][0,142], overrideConfigInsets=[0,137][0,142], overrideNonDecorFrame=[0,0][1080,2282], overrideConfigFrame=[0,137][1080,2282]}
+      ROTATION_270={overrideNonDecorInsets=[0,0][142,63], overrideConfigInsets=[0,137][142,63], overrideNonDecorFrame=[0,0][2282,1017], overrideConfigFrame=[0,137][2282,1017]}
+    SystemGestures:
+      mDisplayCutoutTouchableRegionSize=32
+      mSwipeStartThreshold=Rect(63, 174 - 63, 63)
+      mSwipeDistanceThreshold=63
+
+  DisplayRotation
+    mCurrentAppOrientation=SCREEN_ORIENTATION_NOSENSOR
+    mLastOrientation=5
+    mRotation=0 mDeferredRotationPauseCount=0
+    mLandscapeRotation=ROTATION_90 mSeascapeRotation=ROTATION_270
+    mPortraitRotation=ROTATION_0 mUpsideDownRotation=ROTATION_180
+    mSupportAutoRotation=true
+    WindowOrientationListener
+      mEnabled=true
+      mCurrentRotation=ROTATION_0
+      mSensorType=null
+      mSensor={Sensor name="Goldfish 3-axis Accelerometer", vendor="The Android Open Source Project", version=1, type=1, maxRange=39.300102, resolution=2.480159E-4, power=3.0, minDelay=10000}
+      mRate=2
+      AccelSensorJudge
+        mProposedRotation=0
+        mPredictedRotation=0
+        mLastFilteredX=0.0
+        mLastFilteredY=9.776321
+        mLastFilteredZ=0.812345
+        mLastFilteredTimestampNanos=16815179084 (18.96834ms ago)
+        mTiltHistory={last: 5.0}
+        mFlat=false
+        mSwinging=false
+        mAccelerating=false
+        mOverhead=false
+        mTouched=false
+        mTiltToleranceConfig=[[-25, 70], [-25, 65], [-25, 60], [-25, 65]]
+
+    mCarDockRotation=-1 mDeskDockRotation=-1
+    mUserRotationMode=USER_ROTATION_FREE mUserRotation=ROTATION_0 mCameraRotationMode=0 mAllowAllRotations=unknown
+    mDemoHdmiRotation=ROTATION_90 mDemoHdmiRotationLock=false mUndockedHdmiRotation=-1
+    mLidOpenRotation=-1
+    mFixedToUserRotation=false
+
+    RotationLockHistory
+      10-15 23:10:04.851: mode=USER_ROTATION_LOCKED, rotation=ROTATION_0, caller=MonkeyRotationEven#injectEvent
+      10-15 23:10:04.851: mode=USER_ROTATION_FREE, rotation=ROTATION_0, caller=MonkeyRotationEven#injectEvent
+
+  InputConsumers:
+    name=recents_animation_input_consumer pid=1020 user=UserHandle{0}
+
+  WindowInsetsStateController
+    InsetsState
+      mDisplayFrame=Rect(0, 0 - 1080, 2424)
+      mDisplayCutout=DisplayCutout{insets=Rect(0, 142 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(485, 0 - 595, 142), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=1080 displayHeight=2424 physicalDisplayWidth=1080 physicalDisplayHeight=2424 density={2.625} cutoutSpec={m 581.5,86.5 a 42,42 0 0 0 -84,0 42,42 0 0 0 84,0 z @left} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}} sideOverrides={}}
+      mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=132, center=Point(132, 132)}, RoundedCorner{position=TopRight, radius=132, center=Point(948, 132)}, RoundedCorner{position=BottomRight, radius=132, center=Point(948, 2292)}, RoundedCorner{position=BottomLeft, radius=132, center=Point(132, 2292)}]}
+      mRoundedCornerFrame=Rect(0, 0 - 0, 0)
+      mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(827, 0 - 1043, 142) rotation=0}
+      mDisplayShape=DisplayShape{type=2, displayWidth=1080, displayHeight=2424, physicalPixelDisplaySizeRatio=1.0, rotation=0, offsetX=0, offsetY=0, scale=1.0}
+        InsetsSource id=9daf0001 type=navigationBars frame=[0,2361][1080,2424] visible=false flags=SUPPRESS_SCRIM|ANIMATE_RESIZING sideHint=BOTTOM
+        InsetsSource id=9daf0004 type=systemGestures frame=[0,0][78,2424] visible=true flags= sideHint=LEFT
+        InsetsSource id=9daf0005 type=mandatorySystemGestures frame=[0,2340][1080,2424] visible=true flags= sideHint=BOTTOM
+        InsetsSource id=9daf0006 type=tappableElement frame=[0,0][0,0] visible=true flags= sideHint=NONE
+        InsetsSource id=9daf0024 type=systemGestures frame=[1002,0][1080,2424] visible=true flags= sideHint=RIGHT
+        InsetsSource id=3 type=ime frame=[0,0][0,0] visible=false flags=INVALID sideHint=NONE
+        InsetsSource id=27 type=displayCutout frame=[0,0][1080,142] visible=true flags= sideHint=TOP
+        InsetsSource id=48240000 type=statusBars frame=[0,0][1080,142] visible=false flags= sideHint=TOP
+        InsetsSource id=48240005 type=mandatorySystemGestures frame=[0,0][1080,174] visible=true flags= sideHint=TOP
+        InsetsSource id=48240006 type=tappableElement frame=[0,0][1080,142] visible=true flags= sideHint=TOP
+    Control map:
+      Window{5e1cc94 u0 com.andrewpack.fata/com.andrewpack.fata.MainActivity}:
+        InsetsSourceControl: {3 mType=ime mSurfacePosition=Point(336, 2298) mInsetsHint=Insets{left=0, top=0, right=0, bottom=0} mLeash=null}
+        InsetsSourceControl: {9daf0001 mType=navigationBars initiallyVisible mSurfacePosition=Point(0, 2361) mInsetsHint=Insets{left=0, top=0, right=0, bottom=63} mLeash=Surface(name=Surface(name=823a420 Taskbar#63)/@0x7eee24c - animation-leash of insets_animation#119)/@0xbdae302}
+        InsetsSourceControl: {48240000 mType=statusBars initiallyVisible mSurfacePosition=Point(0, 0) mInsetsHint=Insets{left=0, top=142, right=0, bottom=0} mLeash=Surface(name=Surface(name=ac469cd StatusBar#71)/@0xaae81d0 - animation-leash of insets_animation#118)/@0x2e97413}
+    InsetsSourceProviders:
+      InsetsSourceProvider
+        mSource=InsetsSource id=48240006 type=tappableElement frame=[0,0][1080,142] visible=true flags= sideHint=TOP
+        mSourceFrame=Rect(0, 0 - 1080, 142)
+        mIsLeashInitialized=false mHasPendingPosition=false
+        mWin=Window{ac469cd u0 StatusBar}
+      InsetsSourceProvider
+        mSource=InsetsSource id=48240005 type=mandatorySystemGestures frame=[0,0][1080,174] visible=true flags= sideHint=TOP
+        mSourceFrame=Rect(0, 0 - 1080, 174)
+        mIsLeashInitialized=false mHasPendingPosition=false
+        mWin=Window{ac469cd u0 StatusBar}
+      InsetsSourceProvider
+        mSource=InsetsSource id=48240000 type=statusBars frame=[0,0][1080,142] visible=false flags= sideHint=TOP
+        mSourceFrame=Rect(0, 0 - 1080, 142)
+        mControl=InsetsSourceControl mId=48240000 mType=statusBars mLeash=Surface(name=Surface(name=ac469cd StatusBar#71)/@0xaae81d0 - animation-leash of insets_animation#118)/@0x2e97413 mInitiallyVisible=true mSurfacePosition=Point(0, 0) mInsetsHint=Insets{left=0, top=142, right=0, bottom=0} mSkipAnimationOnce=false mImeStatsToken=null
+        mInsetsHint=Insets{left=0, top=142, right=0, bottom=0}
+        mIsLeashInitialized=true mHasPendingPosition=false
+        mWin=Window{ac469cd u0 StatusBar}
+        mAdapter=ControlAdapter mCapturedLeash=Surface(name=Surface(name=ac469cd StatusBar#71)/@0xaae81d0 - animation-leash of insets_animation#118)/@0x2e97413
+        mControlTarget=Window{5e1cc94 u0 com.andrewpack.fata/com.andrewpack.fata.MainActivity}
+      ImeInsetsSourceProvider
+        mSource=InsetsSource id=3 type=ime frame=[0,0][0,0] visible=false flags=INVALID sideHint=NONE
+        mSourceFrame=Rect(336, 2298 - 744, 2424)
+        mControl=InsetsSourceControl mId=3 mType=ime mLeash=Surface(name=Surface(name=9420c0e InputMethod#81)/@0x416db1a - animation-leash of insets_animation#125)/@0x8766650 mInitiallyVisible=false mSurfacePosition=Point(336, 2298) mInsetsHint=Insets{left=0, top=0, right=0, bottom=0} mSkipAnimationOnce=false mImeStatsToken=null
+        mInsetsHint=Insets{left=0, top=0, right=0, bottom=0} stale
+        mIsLeashInitialized=false mHasPendingPosition=false
+        mWin=Window{9420c0e u0 InputMethod}
+        mAdapter=ControlAdapter mCapturedLeash=Surface(name=Surface(name=9420c0e InputMethod#81)/@0x416db1a - animation-leash of insets_animation#125)/@0x8766650
+        mControlTarget=Window{5e1cc94 u0 com.andrewpack.fata/com.andrewpack.fata.MainActivity}
+        mImeShowing=false mLastDrawn=false
+      InsetsSourceProvider
+        mSource=InsetsSource id=9daf0024 type=systemGestures frame=[1002,0][1080,2424] visible=true flags= sideHint=RIGHT
+        mSourceFrame=Rect(1002, 0 - 1080, 2424)
+        mIsLeashInitialized=false mHasPendingPosition=false
+        mWin=Window{823a420 u0 Taskbar}
+      InsetsSourceProvider
+        mSource=InsetsSource id=9daf0006 type=tappableElement frame=[0,0][0,0] visible=true flags= sideHint=NONE
+        mSourceFrame=Rect(0, 0 - 0, 0)
+        mOverrideFrames={2031=Rect(0, 0 - 0, 0)}
+        mIsLeashInitialized=false mHasPendingPosition=false
+        mWin=Window{823a420 u0 Taskbar}
+      InsetsSourceProvider
+        mSource=InsetsSource id=9daf0005 type=mandatorySystemGestures frame=[0,2340][1080,2424] visible=true flags= sideHint=BOTTOM
+        mSourceFrame=Rect(0, 2340 - 1080, 2424)
+        mIsLeashInitialized=false mHasPendingPosition=false
+        mWin=Window{823a420 u0 Taskbar}
+      InsetsSourceProvider
+        mSource=InsetsSource id=9daf0004 type=systemGestures frame=[0,0][78,2424] visible=true flags= sideHint=LEFT
+        mSourceFrame=Rect(0, 0 - 78, 2424)
+        mIsLeashInitialized=false mHasPendingPosition=false
+        mWin=Window{823a420 u0 Taskbar}
+      InsetsSourceProvider
+        mSource=InsetsSource id=9daf0001 type=navigationBars frame=[0,2361][1080,2424] visible=false flags=SUPPRESS_SCRIM|ANIMATE_RESIZING sideHint=BOTTOM
+        mSourceFrame=Rect(0, 2361 - 1080, 2424)
+        mControl=InsetsSourceControl mId=9daf0001 mType=navigationBars mLeash=Surface(name=Surface(name=823a420 Taskbar#63)/@0x7eee24c - animation-leash of insets_animation#119)/@0xbdae302 mInitiallyVisible=true mSurfacePosition=Point(0, 2361) mInsetsHint=Insets{left=0, top=0, right=0, bottom=63} mSkipAnimationOnce=false mImeStatsToken=null
+        mInsetsHint=Insets{left=0, top=0, right=0, bottom=63}
+        mIsLeashInitialized=true mHasPendingPosition=false
+        mWin=Window{823a420 u0 Taskbar}
+        mAdapter=ControlAdapter mCapturedLeash=Surface(name=Surface(name=823a420 Taskbar#63)/@0x7eee24c - animation-leash of insets_animation#119)/@0xbdae302
+        mControlTarget=Window{5e1cc94 u0 com.andrewpack.fata/com.andrewpack.fata.MainActivity}
+  InsetsPolicy
+    status: WINDOW_STATE_HIDDEN
+    nav: WINDOW_STATE_HIDDEN
+
+  DisplayWindowSettingsProvider
+    SettingsEntry{mWindowingMode=0, mUserRotationMode=null, mUserRotation=null, mForcedWidth=0, mForcedHeight=0, mForcedDensity=0, mForcedDensityRatio=0.0, mForcedScalingMode=null, mRemoveContentMode=0, mShouldShowWithInsecureKeyguard=null, mShouldShowSystemDecors=null, mIsHomeSupported=null, mShouldShowIme=null, mFixedToUserRotation=null, mIgnoreOrientationRequest=null, mIgnoreDisplayCutout=null, mDontMoveToTop=null, mForceAppsUniversalResizable=null, mCanStealTopFocus=null}
+
+  KeyguardController:
+    mKeyguardShowing=false
+    mAodShowing=false
+    mKeyguardGoingAway=false
+   KeyguardShowing=false AodShowing=false KeyguardGoingAway=false DismissalRequested=false  Occluded=false DismissingKeyguardActivity=null TurnScreenOnActivity=null at display=0
+    mDismissalRequested=false
+
+  LockTaskController:
+    mLockTaskModeState=NONE
+    mLockTaskModeTasks=
+    mLockTaskPackages (userId:packages)=
+
+  mCurTaskIdForUser={0=31}
+  mUserRootTaskInFront={}
+  mVisibilityTransactionDepth=0
+  isHomeRecentsComponent=true
+  mNoHistoryActivities=[]
+
+  TaskOrganizerController:
+      android.window.ITaskOrganizer$Stub$Proxy@b8db655 uid=10196 (active):
+        (fullscreen) Task{5eecba7 #1 type=home}
+        (multi-window) Task{6219452 #3 name=Bubbles type=undefined}
+        (fullscreen) Task{e95323 #4 name=SplitRoot type=undefined}
+        (multi-window) Task{abf4020 #5 name=main type=undefined}
+        (multi-window) Task{1b83dd9 #6 name=side type=undefined}
+        (multi-window) Task{c0a5f3f #0 name=Bubbles-visibility-barrier type=undefined}
+        (fullscreen) Task{583faa6 #31 type=standard I=com.andrewpack.fata/.MainActivity}
+
+  VisibleActivityProcess:[ ProcessRecord{e165956 3804:com.andrewpack.fata/u0a229}]
+  NumNonAppVisibleWindowUidMap:[ 10196:3 10193:1]

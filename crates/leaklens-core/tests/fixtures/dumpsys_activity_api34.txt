@@ -1,0 +1,15 @@
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+Display #0 (activities from top to bottom):
+  * Task{8d3b1f2 #42 type=standard A=10187:com.example.shop U=0 visible=true visibleRequested=true mode=fullscreen translucent=false sz=2}
+    mLastPausedActivity: ActivityRecord{1e4a2c1 u0 com.whatsapp/.HomeActivity t40}
+    * Hist  #1: ActivityRecord{6a3c0d9 u0 com.example.shop/.ui.CartActivity t42}
+      packageName=com.example.shop processName=com.example.shop
+    * Hist  #0: ActivityRecord{2b7e9a4 u0 com.example.shop/.ui.MainActivity t42}
+      packageName=com.example.shop processName=com.example.shop
+  * Task{3f1c7d8 #7 type=home A=10123:com.google.android.apps.nexuslauncher U=0 visible=false visibleRequested=false mode=fullscreen translucent=false sz=1}
+    * Hist  #0: ActivityRecord{e1f0b6c u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity t7}
+
+  Resumed activities in task display areas (from top to bottom):
+    Resumed: ActivityRecord{6a3c0d9 u0 com.example.shop/.ui.CartActivity t42}
+
+  ResumedActivity: ActivityRecord{6a3c0d9 u0 com.example.shop/.ui.CartActivity t42}
