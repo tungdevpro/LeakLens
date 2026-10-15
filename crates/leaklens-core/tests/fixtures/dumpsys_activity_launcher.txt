@@ -1,0 +1,10 @@
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+Display #0 (activities from top to bottom):
+  * Task{3f1c7d8 #7 type=home A=10123:com.google.android.apps.nexuslauncher U=0 visible=true visibleRequested=true mode=fullscreen translucent=false sz=1}
+    mLastPausedActivity: ActivityRecord{6a3c0d9 u0 com.example.shop/.ui.CartActivity t42}
+    * Hist  #0: ActivityRecord{e1f0b6c u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity t7}
+
+  Resumed activities in task display areas (from top to bottom):
+    Resumed: ActivityRecord{e1f0b6c u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity t7}
+
+  ResumedActivity: ActivityRecord{e1f0b6c u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity t7}

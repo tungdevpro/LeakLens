@@ -1,0 +1,6 @@
+List of devices attached
+emulator-5554	device
+R5CT1234ABC	unauthorized
+0123456789ABCDEF	offline
+ZY22OLDPHONE	device
+

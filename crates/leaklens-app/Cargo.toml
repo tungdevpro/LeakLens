@@ -1,0 +1,9 @@
+[package]
+name = "leaklens-app"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+leaklens-core = { path = "../leaklens-core" }
+dioxus = { version = "=0.7.10", features = ["desktop"] }
+tokio = { version = "1", features = ["time"] }

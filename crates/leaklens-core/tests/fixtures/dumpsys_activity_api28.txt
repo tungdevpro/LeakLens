@@ -1,0 +1,21 @@
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+Display #0 (activities from top to bottom):
+
+  Stack #17: type=standard mode=fullscreen
+  isSleeping=false
+  mBounds=Rect(0, 0 - 0, 0)
+    Task id #17
+      * TaskRecord{4c2a8b1 #17 A=com.example.notes U=0 StackId=17 sz=1}
+        * Hist #0: ActivityRecord{5b2f1e0 u0 com.example.notes/.EditorActivity t17}
+    Running activities (most recent first):
+      TaskRecord{4c2a8b1 #17 A=com.example.notes U=0 StackId=17 sz=1}
+        Run #0: ActivityRecord{5b2f1e0 u0 com.example.notes/.EditorActivity t17}
+    mLastPausedActivity: ActivityRecord{77d1a02 u0 com.whatsapp/.HomeActivity t15}
+    mResumedActivity: ActivityRecord{5b2f1e0 u0 com.example.notes/.EditorActivity t17}
+
+  mFocusedStack=ActivityStack{3a90c1e stackId=17 type=standard mode=fullscreen visible=true translucent=false, 1 tasks} mLastFocusedStack=ActivityStack{3a90c1e stackId=17 type=standard mode=fullscreen visible=true translucent=false, 1 tasks}
+  mSleepTimeout=false
+  mCurTaskIdForUser={0=17}
+  mUserStackInFront={}
+  isHomeRecentsComponent=true  KeyguardController:
+    mKeyguardShowing=false

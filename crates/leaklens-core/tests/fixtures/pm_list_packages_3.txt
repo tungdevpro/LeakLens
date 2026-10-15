@@ -1,0 +1,3 @@
+package:com.whatsapp
+package:com.example.shop
+package:com.example.notes
