@@ -1,6 +1,20 @@
 :root {
   color-scheme: light dark;
+  /* Categorical chart colours in fixed order (dataviz reference palette). */
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+  --series-3: #1baf7a;
+  --series-4: #eda100;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --series-4: #c98500;
+  }
 }
 
 main {
@@ -53,7 +67,7 @@ h1 {
 }
 
 .chart {
-  margin: 0;
+  margin: 0 0 16px;
   max-width: 960px;
 }
 
@@ -65,8 +79,50 @@ h1 {
   margin-bottom: 4px;
 }
 
-.chart-latest {
+.chart-value {
   font-variant-numeric: tabular-nums;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  list-style: none;
+  margin: 0 0 4px;
+  padding: 0;
+  font-size: 12px;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend .chart-value {
+  opacity: 0.7;
+}
+
+.swatch {
+  width: 12px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--swatch);
+}
+
+.small-multiples {
+  max-width: 960px;
+}
+
+.small-multiples h2 {
+  font-size: 12px;
+  margin: 0 0 6px;
+}
+
+.small-multiples-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .chart svg {
@@ -87,9 +143,30 @@ h1 {
   font-size: 11px;
 }
 
-.chart .series {
+.series-1 { --swatch: var(--series-1); }
+.series-2 { --swatch: var(--series-2); }
+.series-3 { --swatch: var(--series-3); }
+.series-4 { --swatch: var(--series-4); }
+
+.chart .line {
   fill: none;
-  stroke: #1e88e5;
-  stroke-width: 1.5;
+  stroke: var(--swatch);
+  stroke-width: 2;
   stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.chart .dot {
+  fill: var(--swatch);
+}
+
+.chart .crosshair {
+  stroke: currentColor;
+  stroke-opacity: 0.4;
+}
+
+.chart .marker {
+  fill: var(--swatch);
+  stroke: Canvas;
+  stroke-width: 2;
 }

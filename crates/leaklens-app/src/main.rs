@@ -4,11 +4,11 @@ use std::time::Duration;
 
 use dioxus::prelude::*;
 use leaklens_core::{
-    AdbBinary, Device, DeviceStatus, MIN_API_LEVEL, Sample, SamplingIntervals, Session,
+    AdbBinary, Device, DeviceStatus, MIN_API_LEVEL, Memory, Sample, SamplingIntervals, Session,
     SessionState, auto_select, find_adb, list_devices, list_target_apps,
 };
 
-use chart::{LineChart, Point};
+use chart::{LineChart, Point, Series};
 
 /// How often the Device list is refreshed, so plugging in or removing a Device shows up.
 const DEVICE_POLL: Duration = Duration::from_secs(2);
@@ -83,11 +83,30 @@ fn Monitor(adb: AdbBinary) -> Element {
         }
     };
 
-    let cpu_points: Vec<Point> = samples
-        .read()
-        .iter()
-        .filter_map(|s| s.cpu_usage.map(|value| Point { at: s.at, value }))
-        .collect();
+    let intervals = SamplingIntervals::default();
+    let samples = samples.read();
+    let cpu = series(&samples, "CPU Usage", |s| s.cpu_usage);
+    let memory = |name: &str, kb: fn(&Memory) -> Option<u64>| {
+        series(&samples, name, |s| {
+            s.memory.as_ref().and_then(kb).map(|kb| kb as f64 / 1024.0)
+        })
+    };
+    let memory_series = vec![
+        memory("Total PSS", Memory::total_pss_kb),
+        memory("Java Heap", Memory::java_heap_kb),
+        memory("Native Heap", Memory::native_heap_kb),
+        memory("Graphics", Memory::graphics_kb),
+    ];
+    let count = |name: &str, read: fn(&Memory) -> Option<u64>| {
+        series(&samples, name, |s| {
+            s.memory.as_ref().and_then(read).map(|n| n as f64)
+        })
+    };
+    let object_counts = [
+        count("Activities", Memory::activities),
+        count("Views", Memory::views),
+        count("AppContexts", Memory::app_contexts),
+    ];
 
     rsx! {
         div { class: "toolbar",
@@ -99,7 +118,38 @@ fn Monitor(adb: AdbBinary) -> Element {
             }
         }
         if session.read().is_some() {
-            LineChart { title: "CPU Usage", unit: "%", y_floor: 100.0, points: cpu_points }
+            LineChart {
+                title: "CPU Usage",
+                unit: "%",
+                decimals: 1,
+                y_floor: 100.0,
+                max_gap: max_gap(intervals.cpu),
+                series: vec![cpu],
+            }
+            LineChart {
+                title: "Memory",
+                unit: " MB",
+                decimals: 1,
+                y_floor: 10.0,
+                max_gap: max_gap(intervals.memory),
+                series: memory_series,
+            }
+            section { class: "small-multiples",
+                h2 { "Object Counts" }
+                div { class: "small-multiples-row",
+                    for s in object_counts {
+                        LineChart {
+                            title: s.name.clone(),
+                            unit: "",
+                            y_floor: 4.0,
+                            max_gap: max_gap(intervals.memory),
+                            width: 300.0,
+                            height: 150.0,
+                            series: vec![s],
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -211,6 +261,23 @@ fn Pickers(
             p { class: "error", "Could not list Target Apps: {error}" }
         }
     }
+}
+
+/// One chart line from the Samples that carry a value for it.
+fn series(samples: &[Sample], name: &str, value: impl Fn(&Sample) -> Option<f64>) -> Series {
+    let points = samples
+        .iter()
+        .filter_map(|s| value(s).map(|value| Point { at: s.at, value }))
+        .collect();
+    Series {
+        name: name.to_owned(),
+        points,
+    }
+}
+
+/// Points of one metric family further apart than this are drawn as a gap.
+fn max_gap(interval: Duration) -> Duration {
+    interval.mul_f64(2.5)
 }
 
 fn device_label(device: &Device) -> String {

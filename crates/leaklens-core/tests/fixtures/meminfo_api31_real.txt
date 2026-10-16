@@ -1,0 +1,61 @@
+Applications Memory Usage (in Kilobytes):
+Uptime: 112035176 Realtime: 112035176
+
+** MEMINFO in pid 11987 [com.matsukiyo.app] **
+                   Pss  Private  Private     Swap      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap    46564    46504        0        0    49380    55980    50640      923
+  Dalvik Heap     8256     8052        0        0    15964    15952     7976     7976
+ Dalvik Other     4387     4192        0        0     6228                           
+        Stack     2708     2708        0        0     2724                           
+       Ashmem     3096      156        0        0     6552                           
+    Other dev        1        0        0        0      280                           
+     .so mmap     4875      268     2632        0    33632                           
+    .jar mmap     3771        0     2012        0    22124                           
+    .apk mmap    25238      312    10948        0    47200                           
+    .ttf mmap      783        0      536        0     1092                           
+    .dex mmap    12398       20    11236        0    15252                           
+    .oat mmap     1285        0      276        0    13596                           
+    .art mmap     1424      936        0        0    19776                           
+   Other mmap     5706      216     4648        0     7728                           
+      Unknown    10930    10924        0        0    11436                           
+        TOTAL   131422    74288    32288        0   252964    71932    58616     8899
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     8988                          35740
+         Native Heap:    46504                          49380
+                Code:    28248                         133300
+               Stack:     2708                           2724
+            Graphics:        0                              0
+       Private Other:    20128
+              System:    24846
+             Unknown:                                   31820
+ 
+           TOTAL PSS:   131422            TOTAL RSS:   252964      TOTAL SWAP (KB):        0
+ 
+ Objects
+               Views:      193         ViewRootImpl:        4
+         AppContexts:        8           Activities:        2
+              Assets:       18        AssetManagers:        0
+       Local Binders:       70        Proxy Binders:       73
+       Parcel memory:       21         Parcel count:       82
+    Death Recipients:        6      OpenSSL Sockets:       11
+            WebViews:        3
+ 
+ SQL
+         MEMORY_USED:      926
+  PAGECACHE_OVERFLOW:      298          MALLOC_SIZE:       46
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4      104             98     450/297/25  /data/user/0/com.matsukiyo.app/no_backup/androidx.work.workdb
+         4        8                         0/0/0    (attached) temp
+         4      104             41        52/15/3  /data/user/0/com.matsukiyo.app/no_backup/androidx.work.workdb (3)
+         4       60            123       17/24/10  /data/user/0/com.matsukiyo.app/databases/popinfo.db
+         4       28             37         2/19/3  /data/user/0/com.matsukiyo.app/databases/popinfo_event.db
+         4       52             50         8/19/5  /data/user/0/com.matsukiyo.app/databases/popinfoWifi.db
+         4       56             32         1/21/2  /data/user/0/com.matsukiyo.app/databases/com.google.android.datatransport.events
+         4       24             46         4/17/3  /data/user/0/com.matsukiyo.app/databases/popinfo_event_action_condition.db
