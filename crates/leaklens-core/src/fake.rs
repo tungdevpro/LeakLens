@@ -20,8 +20,8 @@ pub struct FakeAdb {
 struct State {
     scripts: HashMap<String, Script>,
     calls: Vec<(String, Instant)>,
-    in_flight: usize,
-    max_in_flight: usize,
+    in_flight: HashMap<String, usize>,
+    max_in_flight: HashMap<String, usize>,
 }
 
 #[derive(Debug, Default)]
@@ -78,9 +78,10 @@ impl FakeAdb {
             .collect()
     }
 
-    /// The most calls that were ever running at the same time.
-    pub fn max_concurrent_calls(&self) -> usize {
-        self.state.lock().unwrap().max_in_flight
+    /// The most calls with `args` that were ever running at the same time.
+    pub fn max_concurrent_calls(&self, args: &str) -> usize {
+        let state = self.state.lock().unwrap();
+        state.max_in_flight.get(args).copied().unwrap_or(0)
     }
 
     fn script(
@@ -105,15 +106,18 @@ impl Adb for FakeAdb {
             };
             let delay = script.delay;
             state.calls.push((key.clone(), Instant::now()));
-            state.in_flight += 1;
-            state.max_in_flight = state.max_in_flight.max(state.in_flight);
+            let in_flight = state.in_flight.entry(key.clone()).or_default();
+            *in_flight += 1;
+            let in_flight = *in_flight;
+            let max = state.max_in_flight.entry(key.clone()).or_default();
+            *max = (*max).max(in_flight);
             delay
         };
         if !delay.is_zero() {
             tokio::time::sleep(delay).await;
         }
         let mut state = self.state.lock().unwrap();
-        state.in_flight -= 1;
+        *state.in_flight.get_mut(&key).unwrap() -= 1;
         let replies = &mut state.scripts.get_mut(&key).unwrap().replies;
         if replies.len() > 1 {
             replies.pop_front().unwrap()
