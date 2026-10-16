@@ -38,3 +38,58 @@ h1 {
 .hint {
   opacity: 0.7;
 }
+
+.toolbar {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.toolbar button {
+  font-size: 13px;
+  padding: 4px 16px;
+}
+
+.chart {
+  margin: 0;
+  max-width: 960px;
+}
+
+.chart figcaption {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.chart-latest {
+  font-variant-numeric: tabular-nums;
+}
+
+.chart svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.chart .grid {
+  stroke: currentColor;
+  stroke-opacity: 0.15;
+}
+
+.chart .axis-label,
+.chart .chart-empty {
+  fill: currentColor;
+  fill-opacity: 0.6;
+  font-size: 11px;
+}
+
+.chart .series {
+  fill: none;
+  stroke: #1e88e5;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}

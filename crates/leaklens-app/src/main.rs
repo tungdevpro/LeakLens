@@ -1,10 +1,14 @@
+mod chart;
+
 use std::time::Duration;
 
 use dioxus::prelude::*;
 use leaklens_core::{
-    AdbBinary, Device, DeviceStatus, MIN_API_LEVEL, auto_select, find_adb, list_devices,
-    list_target_apps,
+    AdbBinary, Device, DeviceStatus, MIN_API_LEVEL, Sample, SamplingIntervals, Session,
+    SessionState, auto_select, find_adb, list_devices, list_target_apps,
 };
+
+use chart::{LineChart, Point};
 
 /// How often the Device list is refreshed, so plugging in or removing a Device shows up.
 const DEVICE_POLL: Duration = Duration::from_secs(2);
@@ -27,19 +31,88 @@ fn App() -> Element {
         main {
             h1 { "LeakLens" }
             match adb {
-                Ok(adb) => rsx! { Pickers { adb } },
+                Ok(adb) => rsx! { Monitor { adb } },
                 Err(error) => rsx! { p { class: "error", "{error}" } },
             }
         }
     }
 }
 
+/// The Device and Target App pickers, Start/Stop, and the live charts.
 #[component]
-fn Pickers(adb: AdbBinary) -> Element {
+fn Monitor(adb: AdbBinary) -> Element {
+    let selected_device = use_signal(|| None::<String>);
+    let selected_app = use_signal(|| None::<String>);
+    let mut session = use_signal(|| None::<Session>);
+    let mut samples = use_signal(Vec::<Sample>::new);
+
+    let running = session
+        .read()
+        .as_ref()
+        .is_some_and(|s| s.state() == SessionState::Running);
+    let can_start = selected_device().is_some() && selected_app().is_some();
+
+    let start_adb = adb.clone();
+    let start = move |_| {
+        let (Some(device), Some(app)) = (selected_device(), selected_app()) else {
+            return;
+        };
+        let started = Session::start(
+            start_adb.clone(),
+            &device,
+            &app,
+            SamplingIntervals::default(),
+        );
+        let mut updates = started.subscribe();
+        samples.set(Vec::new());
+        session.set(Some(started));
+        // Copies new Samples into the UI. Sampling itself runs on its own tokio
+        // task, so it carries on even while Dioxus pauses this one.
+        spawn(async move {
+            while updates.changed().await.is_ok() {
+                if let Some(current) = &*session.peek() {
+                    samples.set(current.samples());
+                }
+            }
+        });
+    };
+    let stop = move |_| {
+        if let Some(current) = session.write().as_mut() {
+            current.stop();
+            samples.set(current.samples());
+        }
+    };
+
+    let cpu_points: Vec<Point> = samples
+        .read()
+        .iter()
+        .filter_map(|s| s.cpu_usage.map(|value| Point { at: s.at, value }))
+        .collect();
+
+    rsx! {
+        div { class: "toolbar",
+            Pickers { adb, selected_device, selected_app, locked: running }
+            if running {
+                button { class: "stop", onclick: stop, "Stop" }
+            } else {
+                button { class: "start", disabled: !can_start, onclick: start, "Start" }
+            }
+        }
+        if session.read().is_some() {
+            LineChart { title: "CPU Usage", unit: "%", y_floor: 100.0, points: cpu_points }
+        }
+    }
+}
+
+#[component]
+fn Pickers(
+    adb: AdbBinary,
+    selected_device: Signal<Option<String>>,
+    selected_app: Signal<Option<String>>,
+    locked: bool,
+) -> Element {
     let mut devices = use_signal(Vec::<Device>::new);
     let mut device_error = use_signal(|| None::<String>);
-    let mut selected_device = use_signal(|| None::<String>);
-    let mut selected_app = use_signal(|| None::<String>);
 
     // Dioxus pauses its tasks while the window is covered and a redraw is pending,
     // so this list can lag until LeakLens is visible again. That's fine for picking a
@@ -93,6 +166,7 @@ fn Pickers(adb: AdbBinary) -> Element {
             label {
                 "Device"
                 select {
+                    disabled: locked,
                     onchange: move |e| selected_device.set(Some(e.value()).filter(|v| !v.is_empty())),
                     option { value: "", selected: selected_device().is_none(), "Choose a Device…" }
                     for device in devices() {
@@ -108,7 +182,7 @@ fn Pickers(adb: AdbBinary) -> Element {
             label {
                 "Target App"
                 select {
-                    disabled: selected_device().is_none(),
+                    disabled: locked || selected_device().is_none(),
                     onchange: move |e| selected_app.set(Some(e.value()).filter(|v| !v.is_empty())),
                     option { value: "", selected: selected_app().is_none(), "Choose a Target App…" }
                     if let Some(Ok(Some(choices))) = &*target_apps.read() {
